@@ -7,7 +7,7 @@ INSTANCE = uuid.uuid4().hex[:8]
 
 @app.route("/")
 def hello():
-    message = os.environ.get("MESSAGE", "Version 1")
+    message = os.environ.get("MESSAGE", "GitHub Auto Deploy")
     service = os.environ.get("K_SERVICE", "local")
     revision = os.environ.get("K_REVISION", "local")
     return (f"{message} - Hello from Cloud Run: service {service}, "
